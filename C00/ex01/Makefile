@@ -1,0 +1,24 @@
+NAME = awesome_phonebook
+SRC = contact.class.cpp phonebook.class.cpp main.cpp
+OBJ = $(SRC:.cpp=.o)
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++ -g -fsanitize=address
+
+%.o : %.cpp
+	$(CC) $(CFLAGS) -c $< 
+
+all : $(NAME)
+
+$(NAME) : $(OBJ)
+	$(CC) $^ -o $@
+
+clean : 
+	rm -rf $(OBJ)
+
+fclean : clean
+	rm -rf $(NAME)
+
+re : fclean all
+
+.PHONY : all clean fclean re
+
