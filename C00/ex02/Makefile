@@ -1,5 +1,5 @@
-NAME = awesome_phonebook
-SRC = contact.class.cpp phonebook.class.cpp main.cpp
+NAME = Bureau
+SRC = Account.cpp tests.cpp
 OBJ = $(SRC:.cpp=.o)
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++ -fsanitize=address

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-static void	fetch_data( std::string	&firstName, std::string &lastName, std::string &nickname, std::string phoneNumber, std::string darkestSecret)
+static void	fetch_data( std::string	&firstName, std::string &lastName, std::string &nickname, std::string &phoneNumber, std::string &darkestSecret)
 {
 	std::cout << "first name : ";
 	if (!getline(std::cin, firstName))
@@ -82,6 +82,8 @@ int main( void )
 		}
 		else if (input == "SEARCH")
 			phoneBook.printUser();
+		else if (input == "EXIT")
+			exit(0);
 		std::cout << ">> ";
 	}
 }
